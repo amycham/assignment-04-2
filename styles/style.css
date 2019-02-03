@@ -4,6 +4,7 @@
   --main-footer-color: rgb(65, 65, 65);
   --main-text-color: rgb(0, 0, 0);
   --accent-text-color: rgb(80, 189, 216);
+  --accent-light: rgb(169, 217, 229);
   --left-padding: 35px;
 
   font-size: .8em;
@@ -207,4 +208,40 @@ p#copyright{
   aside section:first-child a.action:hover{
     color: var(--accent-text-color);
   }
+}
+
+/* rates page */
+table.rates{
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+table.rates th{
+  text-align: left;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  background-color: var(--accent-text-color);
+  padding: 2px 10px;
+}
+
+table.rates td{
+  padding: 2px 10px;
+  width: 33%;
+}
+table.rates td:first-child{
+  font-weight: bold;
+}
+
+table.rates tbody tr:nth-child(even){
+  background-color: var(--main-nav-color);
+}
+
+table.rates tbody tr:hover{
+  background-color: var(--accent-light);
+}
+
+table.rates caption{
+  font-size: 1.25rem;
+  font-style: italic;
+  padding-bottom: 5px;
 }
