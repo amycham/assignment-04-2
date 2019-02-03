@@ -1,9 +1,11 @@
 :root {
   --main-header-color: rgb(34, 153, 183);
   --main-nav-color: rgb(215, 215, 215);
-/*  --main-footer-color: */
+  --main-footer-color: rgb(65, 65, 65);
   --main-text-color: rgb(0, 0, 0);
+  --accent-text-color: rgb(80, 189, 216);
   --left-padding: 35px;
+
   font-size: .8em;
 }
 
@@ -24,7 +26,7 @@ a {
 }
 
 a:hover{
-  color: var(--main-nav-color);
+  color: var(--accent-text-color);
 }
 
 main{
@@ -32,13 +34,18 @@ main{
   width: 65%;
   padding-top: 25px;
   padding-left: var(--left-padding);
+  max-width: 700px;
 }
+
 
 aside{
   float: left;
   width: 30%;
   padding-top: 25px;
+  padding-left: 35px;
+  max-width: 250px;
 }
+
 
 header#pageheader{
   background-color: var(--main-header-color);
@@ -73,7 +80,8 @@ header nav ul{
   padding-left: var(--left-padding);
 }
 
-header nav ul li{
+header nav ul li,
+footer nav ul li{
   list-style-type: none;
   display: inline-block;
 }
@@ -98,19 +106,105 @@ h2{
 
 h3{
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
-p{
+p, figcaption{
   line-height: 1.5em;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
 }
 
 p:last-child{
   margin-bottom: 15px;
 }
 
+blockquote{
+  color: var(--accent-text-color);
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
 
+aside a.action{
+  display: block;
+  padding-bottom: 25px;
+}
 aside img{
   width: 200px;
+}
+
+footer{
+  padding-left: var(--left-padding);
+  padding-top: 45px;
+  text-align: center;
+  background: var(--main-footer-color) url("../images/footer.jpg") no-repeat top center;
+  clear: both;
+  color: rgb(255, 255, 255);
+}
+
+footer img.logo{
+  width: 230px;
+  padding-bottom: 30px;
+}
+
+footer nav ul li a{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 0 5px 10px 5px;
+}
+
+footer nav ul li:first-child a{
+  padding-left: 0;
+}
+
+p#copyright{
+  padding-top: 15px;
+}
+
+/* stack vertical and fill width on smaller screens */
+@media screen and (max-width: 768px){
+  main, aside{
+    max-width: 100%;
+    width: 100%;
+    padding-right: var(--left-padding);
+    float: none;
+  }
+
+  aside{
+    text-align: center;
+    padding: 0;
+  }
+
+  aside section{
+      padding: 15px 0;
+  }
+
+  aside section a.action{
+    font-weight: bold;
+    font-size: 1.05rem;
+    border: 1px solid var(--accent-text-color);
+    width: 12em;
+    margin: 0 auto 10px auto;
+    padding: 5px;
+  }
+
+  aside section:first-child{
+    background-color: var(--main-header-color);
+    color: rgb(255, 255, 255);
+  }
+
+  aside section:nth-child(2){
+    background-color: var(--main-nav-color);
+  }
+
+  aside section:nth-child(2) img{
+    width: 300px;
+    padding-bottom: 15px;
+  }
+  aside section:first-child a.action{
+    color: rgb(255, 255, 255);
+  }
+
+  aside section:first-child a.action:hover{
+    color: var(--accent-text-color);
+  }
 }
