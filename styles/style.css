@@ -163,6 +163,15 @@ p#copyright{
 
 /* stack vertical and fill width on smaller screens */
 @media screen and (max-width: 768px){
+  header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  header nav ul li:first-child a{
+    padding-left: 10px;
+  }
   main, aside{
     max-width: 100%;
     width: 100%;
@@ -176,7 +185,7 @@ p#copyright{
   }
 
   aside section{
-      padding: 15px 0;
+      padding: 15px 5px;
   }
 
   aside section a.action{
@@ -207,6 +216,11 @@ p#copyright{
 
   aside section:first-child a.action:hover{
     color: var(--accent-text-color);
+  }
+
+  footer{
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
